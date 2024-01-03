@@ -7,7 +7,7 @@
     <title>User Profile</title>
 </head>
 <body>
-    <h1>Welcome To The Comb </h1>
+
     <!-- Nav Bar-->
     <nav>
         <ul>
@@ -16,10 +16,18 @@
         </ul>
     </nav>
 
+    <h1>Welcome To The Comb </h1>
+    <!-- display username -->
+    <h2 id="username"></h2>
+
+    <!-- Display Post Counts by Category -->
+    <div id="postCountsByCategory"></div>
+
+    
     <!-- Action Buttons-->
-    <button onclick="window.location.href='/createPost.html'">Create Post</button>
-    <button onclick="window.location.href='/viewPosts.html'">View Posts</button>
-    <button onclick="window.location.href='/publicFeed.html'">View Profile</button>
+    <button id="create-btn">Create Post</button>
+    <button id="view-btn">View Posts</button>
+    <button id="public-btn">Public Feed</button>
         
 </body>
 </html>

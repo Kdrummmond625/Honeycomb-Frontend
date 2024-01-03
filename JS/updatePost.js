@@ -56,7 +56,9 @@ function updatePost(postId) {
     const post = {
         title: document.getElementById('title').value,
         category: document.getElementById('category').value,
-        content: document.getElementById('content').value
+        content: document.getElementById('content').value,
+        isPublic: document.getElementById('isPublic').checked
+        
     };
 
     // Send a PUT request to update the post
@@ -77,7 +79,7 @@ function updatePost(postId) {
     .then(data => {
         console.log('Success:', data);
         alert('Post updated successfully!');
-        // Redirect or update UI as needed after successful update
+        window.location.href = 'userPosts.html'; // Redirect to 'My Posts' page on success
     })
     .catch(error => console.error('Error:', error)); // Log errors, if any
 }

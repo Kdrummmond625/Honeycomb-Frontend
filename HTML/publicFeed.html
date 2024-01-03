@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Home Page</title>
+    <script defer src="../JS/publicFeed.js"></script>
+    <title>HoneyComb Public Feed</title>
 </head>
 <body>
      <!-- Nav Bar-->
@@ -11,10 +12,15 @@
         <ul>
             <li><a href="settings.html">Settings</a></li>
             <li><a href="#" onclick="logout()">Logout</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="userPosts.html">Posts</a></li>
         </ul>
     </nav>
-    
-    
-    
+
+    <!-- public feed container-->
+    <h1>HoneyComb Public Feed</h1>
+    <div id="publicFeedContainer"></div>
+
+
 </body>
 </html>

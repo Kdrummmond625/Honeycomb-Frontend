@@ -12,6 +12,8 @@
         <ul>
             <li><a href="settings.html">Settings</a></li>
             <li><a href="#" onclick="logout()">Logout</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="userPosts.html">Posts</a></li>
         </ul>
     </nav>
 
@@ -29,6 +31,12 @@
 
         <label for="content">Content:</label><br>
         <textarea id="content" name="content" required></textarea><br>
+        <div>
+            <label class="switch">
+                <input type="checkbox" id="isPublic">
+                <span class="slider round"></span>Make Public
+            </label>
+        </div><br>
 
         <button type="submit">Create Post</button>
     </form>
