@@ -70,7 +70,7 @@ function displayPosts(posts) {
 async function deletePost(id) {
     const token = localStorage.getItem('token');
     console.log("Retrieved token:", token); // Log the retrieved token
-    const response = await fetch(`http://localhost:4000/honeycomb/home/myPosts/${id}`, {
+    const response = await fetch(`http://localhost:4000/honeycomb/home/deletePost/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
@@ -115,11 +115,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// addEventListener to the search form
-// function filterPosts(category) {
-//     const searchTerms = document.getElementById('searchTerms').value.toLowerCase();
-//     const filteredPosts = allPosts.filter(post => post.category.toLowerCase().includes(searchTerm));
-//     displayPosts(filteredPosts);
-// }
-
-// getPosts();
