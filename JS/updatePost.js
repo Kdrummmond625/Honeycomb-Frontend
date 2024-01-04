@@ -83,3 +83,8 @@ function updatePost(postId) {
     })
     .catch(error => console.error('Error:', error)); // Log errors, if any
 }
+//logout function
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'login.html';
+}

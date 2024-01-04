@@ -48,6 +48,7 @@ function displayPosts(posts) {
             <h2>${post.category}</h2>
             <h3>${post.title}</h3>
             <p>${post.content}</p>
+            <p>${post.isPublic ? 'Public' : 'Private'}</p>
             <button class="update-btn" data-id="${post._id}">Update</button>
             <button class="delete-btn" data-id="${post._id}">Delete</button>`;
 

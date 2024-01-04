@@ -38,3 +38,10 @@ document.getElementById('postForm').addEventListener('submit', async function (e
     })
     .catch(error => console.error('Error:', error)); // Log any errors that occur during fetch
 });
+
+
+//logout function
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'login.html';
+}

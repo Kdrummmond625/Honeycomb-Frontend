@@ -36,3 +36,9 @@ function displayPublicFeed(post) {
 
 //fetch and display public post when DOM content is loaded
 document.addEventListener('DOMContentLoaded', fetchPublicFeed);
+
+//logout function
+function logout() {
+    localStorage.removeItem('token');
+    window.location.href = 'login.html';
+}

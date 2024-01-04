@@ -1,0 +1,93 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../Assests/background-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.container {
+    display: grid;
+    min-height: 70vh;
+    min-width: auto;
+    grid-template-columns: auto;
+    grid-template-rows: 30% auto 5%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". Header ."
+        ". formContainer ."
+        ". footer  .";
+    background-color: rgba(189, 140, 63, 0.85);
+    border: 2px solid #f2eddfad;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+.Header {
+    grid-area: Header;
+    font-size: 6em;
+    margin: 10px, 0px, 10px, 0px;
+    color: #37290C;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.formContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto ;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: formContainer;
+    font-family: 'Bebas Neue', sans-serif;
+    
+}
+
+#registrationForm {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #34260F;
+}
+
+#registrationForm input,
+#registrationForm button,
+button {
+    width: auto; /* Full width of the form */
+    margin-bottom: 1vh; /* Spacing between form elements */
+    font-size: 1em;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+p {
+    margin: 0;
+    justify-items: start;
+    font-size: 1.6em;
+}
+
+h2 {
+    margin: 0;
+    justify-items: start;
+    font-size: 3em;
+}
+
+.Header img {
+    width: 60vh;
+    height: auto;
+}

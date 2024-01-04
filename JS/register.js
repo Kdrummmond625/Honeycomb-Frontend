@@ -3,9 +3,9 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     e.preventDefault();// prevent the default action of the form
 
     //Retrieve vakues from the registration form inputs
-    const username = document.getElementById('registerUsername').value;
-    const password = document.getElementById('registerPassword').value;
-    const email = document.getElementById('registerEmail').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value;
 
     // send a post request to the server's signup endpoint
     const response = await fetch('http://localhost:4000/honeycomb/user/signup', {
@@ -22,7 +22,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     // check if the request was successful
     if (response.ok) {
         // if successful, redirect to the login page
-        window.location.replace('http://localhost:4000/honeycomb/user/login');
+        window.location.replace('login.html');
     } else {
         // if unsuccessful, display the error message
         document.getElementById('registrationError').textContent = data.message;
