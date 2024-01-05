@@ -43,7 +43,7 @@ document.getElementById('postForm').addEventListener('submit', async function (e
 //logout function
 function logout() {
     localStorage.removeItem('token');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 
     // window.location.href = '../index.html';
 

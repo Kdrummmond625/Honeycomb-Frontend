@@ -86,5 +86,5 @@ async function deletePost(id) {
 // logout function
 function logout() {
     localStorage.removeItem('jwtToken');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }

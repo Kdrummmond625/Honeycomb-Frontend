@@ -22,7 +22,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     // check if the request was successful
     if (response.ok) {
         // if successful, redirect to the login page
-        window.location.replace('login.html');
+        window.location.replace('index.html');
     } else {
         // if unsuccessful, display the error message
         document.getElementById('registrationError').textContent = data.message;
