@@ -23,7 +23,7 @@
         <!-- Nav Bar-->
         <nav class="navbar navbar-expand-lg ">
             <div class="container">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">HONEYCOMB</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -49,33 +49,34 @@
         </nav>
         <!-- Post Form -->
         <div class="container mt-4">
-            <h1>Create Post</h1>
-            <form id="postForm">
-                <label for="title">Title:</label><br>
-                <input type="text" id="title" name="title" required><br>
+            <div id="container">
+                <h1>Create Post</h1>
+                <div id="post-container">
+                    <form id="postForm">
+                        <label for="title">Title:</label>
+                        <input type="text" id="title" name="title" required>
 
-                <label for="category">Category:</label><br>
-                <select id="category" name="category" required>
-                    <option value="I Want To Vent">I Want To Vent</option>
-                    <option value="I Want To Heal">I Want To Heal</option>
-                    <option value="I Won">I Won</option>
-                </select><br>
+                        <label for="category">Category:</label>
+                        <select id="category" name="category" required>
+                            <option value="I Want To Vent">I Want To Vent</option>
+                            <option value="I Want To Heal">I Want To Heal</option>
+                            <option value="I Won">I Won</option>
+                        </select>
 
-                <label for="content">Content:</label><br>
-                <textarea id="content" name="content" required></textarea><br>
-                <div>
-                    <label class="switch">
-                        <input type="checkbox" id="isPublic">
-                        <span class="slider round"></span>Make Public
-                    </label>
-                </div><br>
-
-                <button type="submit">Create Post</button>
-            </form>
-
+                        <label for="content">Content:</label>
+                        <textarea id="content" name="content" required></textarea>
+                        <div>
+                            <label class="switch">
+                                <span class="slider round">Make Public</span>
+                                <input type="checkbox" id="isPublic">
+                            </label>
+                        </div>
+                        <button type="submit">Create Post</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>

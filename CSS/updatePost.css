@@ -56,6 +56,41 @@ body {
     color: #f4f0f0;
 }
 
+#container{
+  background-color: rgba(242, 237, 223, .5);
+  border: 2px solid #37290C;
+  box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.5);
+  padding: 60px;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+
+#container input[type="text"],
+#container select,
+#container textarea,
+#container button {
+  width: calc(100% - 20px); /* Subtracting double the padding */
+   /* Border is included in width due to border-box */
+   margin-bottom: 10px;
+   font-size: 1.5em;
+}
+
+/* Adjusting label elements */
+#container label {
+  display: block;
+  font-size: 2em;
+}
+
+#container textarea {
+    height: 30vh; /* Adjust the height as needed */
+    width: calc(100% - 20px); /* Adjusting for border and padding */
+    margin-top: 0; 
+}
+
 /* Styles for the switch container */
 .switch {
     position: relative;
@@ -110,7 +145,7 @@ body {
   
   /* Styles for the switch when it's checked (Public) */
   input:checked + .slider {
-    background-color: #2196F3; /* Blue color when checked */
+    background-color: #37290C; /* Blue color when checked */
   }
   
   /* Styles for the slider's round shape when it's checked (Public) */
