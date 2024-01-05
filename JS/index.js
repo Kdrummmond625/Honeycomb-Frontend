@@ -19,7 +19,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
         const data = await response.json();
         localStorage.setItem('token', data.token); // Store the token
-        window.location.href = 'profile.html';
+        window.location.href = '/HTML/profile.html';
     } catch (error) {
         console.error('Login error:', error);
         document.getElementById('loginError').textContent = error.message;

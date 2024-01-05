@@ -10,7 +10,7 @@ async function getPosts() {
 
     if (!token) {
         console.error('No token found');
-        window.location.replace('index.html');
+        window.location.replace('../index.html');
         return;
     }
 
@@ -99,7 +99,7 @@ function filterPosts() {
 
 function logout() {
     localStorage.removeItem('jwtToken');
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 }
 
 

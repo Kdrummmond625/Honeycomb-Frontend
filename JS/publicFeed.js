@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', fetchPublicFeed);
 //logout function
 function logout() {
     localStorage.removeItem('token');
-    window.location.href = 'index.html';
+    window.location.href = '../index.html';
 }
