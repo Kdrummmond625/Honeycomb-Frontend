@@ -44,4 +44,7 @@ document.getElementById('postForm').addEventListener('submit', async function (e
 function logout() {
     localStorage.removeItem('token');
     window.location.href = 'login.html';
+
+    // window.location.href = '../index.html';
+
 }
