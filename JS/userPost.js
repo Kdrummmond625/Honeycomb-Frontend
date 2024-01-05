@@ -10,7 +10,7 @@ async function getPosts() {
 
     if (!token) {
         console.error('No token found');
-        window.location.replace('http://localhost:4000/honeycomb/user/login');
+        window.location.replace('login.html');
         return;
     }
 
@@ -38,31 +38,35 @@ async function getPosts() {
 
 // Function to display all posts in the postContainer
 function displayPosts(posts) {
+    
     const postContainer = document.getElementById('postsContainer');
     postContainer.innerHTML = ''; // Clear the container
 
     posts.forEach(post => {
         const postElement = document.createElement('div');
         postElement.classList.add('post');
+
+        // Limit the content to a certain length for preview
+        const contentPreview = post.content.length > 100 ? post.content.substring(0, 130) + '...' : post.content;
+
+
         postElement.innerHTML = `
             <h2>${post.category}</h2>
             <h3>${post.title}</h3>
-            <p>${post.content}</p>
-            <p>${post.isPublic ? 'Public' : 'Private'}</p>
-            <button class="update-btn" data-id="${post._id}">Update</button>
-            <button class="delete-btn" data-id="${post._id}">Delete</button>`;
+            <p>${contentPreview}</p>
+            <button class="viewPost-btn" data-id="${post._id}">View Post</button>`;
 
             // set up the update button
-            const updateBtn = postElement.querySelector('.update-btn');
-            updateBtn.addEventListener('click', () => {
-                window.location.href = `../HTML/updatePost.html?id=${post._id}`
+            const viewPost = postElement.querySelector('.viewPost-btn');
+            viewPost.addEventListener('click', () => {
+                window.location.href = `../HTML/viewPost.html?id=${post._id}`
             });
 
             // set up the delete button
-            const deleteBtn = postElement.querySelector('.delete-btn');
-            deleteBtn.addEventListener('click', async () => {
-                await deletePost(post._id);
-            })
+            // const deleteBtn = postElement.querySelector('.delete-btn');
+            // deleteBtn.addEventListener('click', async () => {
+            //     await deletePost(post._id);
+            // })
 
         postContainer.appendChild(postElement);
     });

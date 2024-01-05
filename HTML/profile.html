@@ -1,33 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/profile.css">
     <script defer src="../JS/profile.js"></script>
     <title>User Profile</title>
 </head>
+
 <body>
+    <div class="container-fluid">
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <a class="navbar-brand" href="#">HONEYCOMB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="userPages/settings.html">Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="logout()">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-    <!-- Nav Bar-->
-    <nav>
-        <ul>
-            <li><a href="userPages/settings.html">Settings</a></li>
-            <li><a href="#" onclick="logout()">Logout</a></li>
-        </ul>
-    </nav>
+        <!-- Welcome To The Comb with Username -->
+        <h1>WELCOME TO THE COMB</h1>
+        <div class="row">
+            <div class="col-md-12 col-centered">
+                <div class="image-container">
+                    <img src="../Assests/profile-logo.png">
+                    <h2 id="username"></h2>
+                </div>
+            </div>
+        </div>
 
-    <h1>Welcome To The Comb </h1>
-    <!-- display username -->
-    <h2 id="username"></h2>
+        <!-- Display Counts -->
+        <div class="row">
+            <div class="col-md-12 col-centered">
+                <div id="postCountsByCategory"></div>
+            </div>
+        </div>
 
-    <!-- Display Post Counts by Category -->
-    <div id="postCountsByCategory"></div>
-
-    
-    <!-- Action Buttons-->
-    <button id="create-btn">Create Post</button>
-    <button id="view-btn">View Posts</button>
-    <button id="public-btn">Public Feed</button>
+        <!-- Action Buttons -->
         
+            <div class="col-md-4 ">
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="create-btn">Create Post</button>
+                </div>
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="view-btn">View Posts</button>
+                </div>
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="public-btn">Public Feed</button>
+                </div>
+            </div>
+        
+    </div>
+
 </body>
+
 </html>

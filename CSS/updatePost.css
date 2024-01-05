@@ -1,0 +1,128 @@
+/* Custom CSS for User Profile Page */
+
+body {
+    background-image: url("../Assests/background-2.png"); /* Background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Container styling */
+.container-fluid {
+    background-color: rgba(189, 140, 63, 0.97); /* Background color with opacity */
+    border: 2px solid #37290C;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+    padding: 20px;
+    max-width: 750px;
+    min-height: 100vh;
+}
+
+.row {
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+
+/* NAV bar styling */
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #ba8530;
+    font-size: 1.6em;
+}
+
+.navbar {
+    background-color: #37290C ;
+    color: #f4f0f0;
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+}
+
+.navbar-brand {
+    color: #c5b28c;
+}
+
+.navbar-nav .nav-link {
+    color: #c5b28c;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f4f0f0;
+}
+
+/* Styles for the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Styles for the switch input */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Styles for the slider (the "switch") */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Default background color */
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  /* Styles for the slider's round shape */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  /* Styles for the slider when it's checked (Public) */
+  .slider.round:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+
+  /* Styles for the "Private" label */
+  #privateLabel {
+    margin-left: 10px;
+    color: #ccc; /* Default color when unchecked */
+  }
+  
+  /* Styles for the switch when it's checked (Public) */
+  input:checked + .slider {
+    background-color: #2196F3; /* Blue color when checked */
+  }
+  
+  /* Styles for the slider's round shape when it's checked (Public) */
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px); /* Move the round shape to the right */
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  
+  /* Hide the "Private" label when checked */
+  input:checked + .slider + #privateLabel {
+    display: none;
+  }
+  

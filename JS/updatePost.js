@@ -22,6 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault(); // Prevent the default form submission behavior
         updatePost(postId); // Call the function to update the post
     });
+
+    // Add an event listener to the cancle button
+    document.getElementById('cancelBtn').addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent the default form submission behavior
+        window.location.href = 'userPosts.html'; // Redirect to 'My Posts' page
+    });
 });
 
 // Function to fetch post data

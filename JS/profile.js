@@ -52,10 +52,11 @@ function displayProfileData(data) {
     //display post count by category
     const postCountsElement = document.getElementById('postCountsByCategory');
     data.postCountsByCategory.forEach(category => {
-        const categoryElement = document.createElement('li');
-        categoryElement.textContent = `${category._id}: ${category.count}`;
+        const categoryElement = document.createElement('ul');
+        categoryElement.innerHTML = `${category._id}<br>${category.count}`;
         postCountsElement.appendChild(categoryElement);
-    })
+    });
+    
 }
 
 
