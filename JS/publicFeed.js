@@ -11,7 +11,8 @@ function fetchPublicFeed() {
     })
         .then(response => response.json())
         .then(data => {
-            displayPublicFeed(data)
+            displayPublicFeed(data.posts)
+            displayCategoryCounts(data.counts)
         })
         .catch(err => console.error('Error:', err));
 }
@@ -25,12 +26,27 @@ function displayPublicFeed(post) {
         const postElement = document.createElement('div');
         postElement.classList.add('post');
         postElement.innerHTML = `
-            <h2>${post.category}</h2>
-            <h3>${post.title}</h3>
+            <h1>${post.category}</h2>
+            <h4>${post.title}</h3>
             <p>${post.content}</p>
             <small>${post.username}</small>`;
         postContainer.appendChild(postElement);
             
+    })
+}
+
+//function to display category counts
+function displayCategoryCounts(counts) {
+    //grab the category count container
+    const categoryCountsContainer = document.getElementById('category-counts-container')
+    categoryCountsContainer.inerHTML = ''; //clear the container
+    counts.forEach(count => {
+        const countElement = document.createElement('div')
+        countElement.classList.add('category-count')
+        countElement.innerHTML = `
+        <strong>${count._id}</strong>: ${count.count}`
+            //append the count element to the container
+            categoryCountsContainer.appendChild(countElement)
     })
 }
 

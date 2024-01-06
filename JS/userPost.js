@@ -1,9 +1,9 @@
 // Global variable to store all posts
-let allPosts = []; 
+let allPosts = [];
 
 // Function to fetch posts from the server
 async function getPosts() {
-    console.log("getPosts function called"); // Confirm function execution
+    console.log("getPosts function called");
 
     const token = localStorage.getItem('token');
     console.log("Retrieved token:", token); // Log the retrieved token
@@ -22,15 +22,19 @@ async function getPosts() {
             }
         });
 
-        console.log("Response status:", response.status); // Log the response status
+        console.log("Response status:", response.status);
 
         if (!response.ok) {
             throw new Error(`Failed to fetch posts, status code: ${response.status}`);
         }
+        // Update allPosts with the fetched data
 
-        allPosts = await response.json(); // Update allPosts with the fetched data
+        allPosts = await response.json();
         console.log("Received data:", allPosts); // Log the data received from the server
-        displayPosts(allPosts); // Display the posts
+        displayPosts(allPosts.posts); 
+        displayCategoryCounts(allPosts.counts)// Display the posts
+
+        
     } catch (err) {
         console.error('Error fetching posts:', err);
     }
@@ -38,7 +42,7 @@ async function getPosts() {
 
 // Function to display all posts in the postContainer
 function displayPosts(posts) {
-    
+
     const postContainer = document.getElementById('postsContainer');
     postContainer.innerHTML = ''; // Clear the container
 
@@ -51,25 +55,39 @@ function displayPosts(posts) {
 
 
         postElement.innerHTML = `
-            <h2>${post.category}</h2>
-            <h3>${post.title}</h3>
+            <h1>${post.category}</h2>
+            <h4>${post.title}</h3>
             <p>${contentPreview}</p>
-            <button class="viewPost-btn" data-id="${post._id}">View Post</button>`;
+            `;
 
-            // set up the update button
-            const viewPost = postElement.querySelector('.viewPost-btn');
-            viewPost.addEventListener('click', () => {
-                window.location.href = `../HTML/viewPost.html?id=${post._id}`
-            });
+        // set up the update button
+        // const viewPost = postElement.querySelector('.viewPost-btn');
+        postElement.addEventListener('click', () => {
+            window.location.href = `../HTML/viewPost.html?id=${post._id}`
+        });
 
-            // set up the delete button
-            // const deleteBtn = postElement.querySelector('.delete-btn');
-            // deleteBtn.addEventListener('click', async () => {
-            //     await deletePost(post._id);
-            // })
+        // set up the delete button
+        // const deleteBtn = postElement.querySelector('.delete-btn');
+        // deleteBtn.addEventListener('click', async () => {
+        //     await deletePost(post._id);
+        // })
 
         postContainer.appendChild(postElement);
     });
+}
+
+//display category counts
+function displayCategoryCounts(counts){
+    const categoryCountsContainer = document.getElementById('category-counts-container')
+    categoryCountsContainer.inerHTML = ''; //clear the container
+    counts.forEach(count => {
+        const countElement = document.createElement('div')
+        countElement.classList.add('category-count')
+        countElement.innerHTML = `
+        <strong>${count._id}</strong>: ${count.count}`
+            //append the count element to the container
+            categoryCountsContainer.appendChild(countElement)
+    })
 }
 
 async function deletePost(id) {
@@ -81,7 +99,7 @@ async function deletePost(id) {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`
         }
-})
+    })
     if (response.ok) {
         window.location.href = '../HTML/userPosts.html';
     } else {
@@ -105,10 +123,10 @@ function logout() {
 
 
 // Optional: Add event listener for search/filter functionality
-document.getElementById('searchForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    filterPosts();
-});
+// document.getElementById('searchForm').addEventListener('submit', function (e) {
+//     e.preventDefault();
+//     filterPosts();
+// });
 
 // Event listener for DOM content loaded
 document.addEventListener('DOMContentLoaded', () => {

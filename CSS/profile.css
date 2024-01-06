@@ -1,21 +1,38 @@
 /* Custom CSS for User Profile Page */
+* {
+    box-sizing: border-box;
+}
 
 body {
-    background-image: url("../Assests/background-2.png"); /* Background image */
+    position: relative;
+    background-image: url("../Assests/background-2.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     margin: 0;
-    font-family: 'Teko', sans-serif;
+    font-family: 'Teko', sans-serif, Arial, Helvetica;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+    z-index: -1; /* Ensures the overlay is behind the content */
 }
 
 /* Container styling */
 .container-fluid {
     background-color: rgba(189, 140, 63, 0.97); /* Background color with opacity */
     border: 2px solid #f2eddfad;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.4); /* Box shadow with opacity */
     padding: 20px;
-    max-width: 750px;
+    margin: auto;
+    max-width: 1000px;
     min-height: 100vh;
 }
 
@@ -36,20 +53,20 @@ body {
     text-decoration: none;
     color: #ba8530;
     font-size: 1.6em;
+    transition: color 0.3s ease;
 }
 
 .navbar {
     background-color: #37290C ;
     color: #f4f0f0;
-    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+    box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
 }
 
-.navbar-brand {
+.navbar-nav .nav-link , .navbar-brand{
     color: #c5b28c;
-}
-
-.navbar-nav .nav-link {
-    color: #c5b28c;
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
@@ -59,19 +76,25 @@ body {
 #container{
     background-color: rgba(242, 237, 223, .5);
     border: 2px solid #37290C;
-    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.5);
-    padding: 60px;
-    margin: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
   }
 
 h1 {
-    color: #37290C; 
-    text-shadow: #e2c385 4px 2px;
+    color:#e2c385; 
+    background-color: #37290C;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    /* text-shadow: #f9f8f6 4px 2px; */
     font-size:5em;
     text-align: left;
-    margin-top: 40px;
-    margin-bottom: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
+    border: #f4f0f0 2px solid;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .col-centered {
@@ -96,26 +119,38 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.); /* Optional background color with opacity */
     padding: 10px 20px; /* Optional padding for better readability */
     font-size: 3em;
 }
 
 /* Post Category Styles */
 #postCountsByCategory {
-    display: inline-flex;
+    display: flex;
     text-align: center;
-    font-size: 2em;
-    padding-top: 20px;
+    font-size: em;
+    background-color: #37290C;
+    color:#c5b28c;
+    justify-content: space-evenly;
+    border: #f4f0f0 2px solid;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
 }
+
+p{
+    padding: 2px;
+    margin: 10px;
+}
+
+
 
 /* Button Styles */
 
-
-
-.action-buttons {
-    margin-top: 50px;
-    display: inline-flex;
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    box-sizing: border-box;
 }
 
 
@@ -125,7 +160,10 @@ button {
     border: none;
     padding: 10px 20px;
     font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
 }
+
 button:hover {
     background-color: #573f19; /* Button color on hover */
     color: #fff; /* Text color on hover */

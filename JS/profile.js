@@ -52,7 +52,7 @@ function displayProfileData(data) {
     //display post count by category
     const postCountsElement = document.getElementById('postCountsByCategory');
     data.postCountsByCategory.forEach(category => {
-        const categoryElement = document.createElement('ul');
+        const categoryElement = document.createElement('p');
         categoryElement.innerHTML = `${category._id}<br>${category.count}`;
         postCountsElement.appendChild(categoryElement);
     });
