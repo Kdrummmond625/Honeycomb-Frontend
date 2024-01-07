@@ -43,6 +43,10 @@ function fetchPostData(postId) {
             document.getElementById('category').textContent = post.category;
             document.getElementById('content').textContent = post.content;
 
+            // Display whether the post is private or public
+            const privacyStatus = post.isPublic ? "Public" : "Private"; 
+            document.getElementById('privacyStatus').textContent = `${privacyStatus}`;
+
             // set up the update button
             const updateBtn = document.getElementById('updateBtn');
             updateBtn.addEventListener('click', () => {

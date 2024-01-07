@@ -17,6 +17,7 @@ body {
     padding: 20px;
     max-width: 750px;
     min-height: 100vh;
+    border-radius: 10px;
 }
 
 .row {
@@ -41,11 +42,13 @@ body {
 .navbar {
     background-color: #37290C ;
     color: #f4f0f0;
-    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .navbar-brand {
     color: #c5b28c;
+    font-size: 2em;
 }
 
 .navbar-nav .nav-link {
@@ -62,4 +65,55 @@ body {
     box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.5);
     padding: 60px;
     margin: 10px;
+    border-radius: 10px;
 }
+
+#post-header {
+    text-align: right;
+    padding-right: 10px;
+    display: flex;
+} 
+
+h2 {
+    font-size: 2.5em;
+    color: #ba8530;
+    float: right;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#privacyStatus p {
+    font-size: 1.5em;
+    color: #37290C;
+    margin: 20px;
+    display: block;
+}
+
+#category {
+    font-size: 1.8em;
+    color: #37290C;
+    font-weight: 500;
+    padding-top: 60px;
+}
+
+#content{
+    font-size: 1.5em;
+    color: #37290C;
+}
+
+button {
+    color:#37290C;
+    border-radius: 5px;
+    background-color: #ba8530;
+    border: 2px solid #37290C;
+    float: right;
+    margin: 5px;
+    font-size: 1.3em;
+}
+
+button:hover {
+    background-color: #d9a760; 
+    border-color: #4a2d0f; 
+    color: #ffffff; 
+}
+

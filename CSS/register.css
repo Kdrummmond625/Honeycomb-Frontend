@@ -1,0 +1,60 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("../Assests/background-2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.container-fluid {
+    background-color: rgba(189, 140, 63, 0.85);
+    border: 2px solid #f2eddfad;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: auto;
+    max-width: 1100px; 
+}
+
+#formContainer {
+    text-align: center;
+}
+
+#registrationForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#registrationForm input,
+#registrationForm button {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    background-color: rgba(242, 237, 223, .8);
+    border-radius: 10px;
+    border: 2px solid #37290C;
+    padding: 10px;
+}
+
+#registrationForm button {
+    background-color: #4e3713;
+    border-color: #37290C;
+    color: #F2EDDF;
+    cursor: pointer;
+}
+
+#registrationForm button:hover {
+    background-color: #d9a760;
+}
+
+h1 {
+    color: #37290C;
+    margin-bottom: 20px;
+}
+

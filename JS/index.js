@@ -18,7 +18,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
         }
 
         const data = await response.json();
-        localStorage.setItem('token', data.token); // Store the token
+        localStorage.setItem('token', data.token); 
         window.location.href = '/HTML/profile.html';
     } catch (error) {
         console.error('Login error:', error);

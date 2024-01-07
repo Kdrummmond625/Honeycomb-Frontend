@@ -20,16 +20,16 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
-    z-index: -1; /* Ensures the overlay is behind the content */
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1; 
 }
 
 /* Container styling */
 .container-fluid {
-    background-color: rgba(189, 140, 63, 0.97); /* Background color with opacity */
+    background-color: rgba(189, 140, 63, 0.97); 
     border: 2px solid #f2eddfad;
     border-radius: 15px;
-    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.4); /* Box shadow with opacity */
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.4); 
     padding: 20px;
     margin: auto;
     max-width: 1000px;
@@ -47,6 +47,7 @@ body::before {
 .nav ul li {
     display: inline;
     margin-right: 20px;
+    font-size: 1.2em;
 }
 
 .nav ul li a {
@@ -64,9 +65,15 @@ body::before {
     border-radius: 15px;
 }
 
-.navbar-nav .nav-link , .navbar-brand{
+.navbar-brand{ 
+    color: #c5b28c;
+    font-size: 2em;
+}
+
+.navbar-nav .nav-link {
     color: #c5b28c;
     transition: color 0.3s ease;
+    font-size: 1.2em;
 }
 
 .navbar-nav .nav-link:hover {
@@ -79,20 +86,19 @@ body::before {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
     padding: 20px;
     margin: 20px;
-    border-radius: 15px;
+    border-radius: 10px;
   }
 
 h1 {
     color:#e2c385; 
     background-color: #37290C;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
-    /* text-shadow: #f9f8f6 4px 2px; */
     font-size:5em;
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
-    border: #f4f0f0 2px solid;
+    border: #F2EDDF 2px solid;
     box-sizing: border-box;
     border-radius: 15px;
 }
@@ -119,7 +125,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    padding: 10px 20px; /* Optional padding for better readability */
+    padding: 10px 20px; 
     font-size: 3em;
 }
 
@@ -155,8 +161,8 @@ p{
 
 
 button {
-    background-color: #37290C; /* Button color */
-    color: #fff; /* Text color */
+    background-color: #37290C; 
+    color: #fff; 
     border: none;
     padding: 10px 20px;
     font-size: 1.2em;
@@ -165,7 +171,7 @@ button {
 }
 
 button:hover {
-    background-color: #573f19; /* Button color on hover */
-    color: #fff; /* Text color on hover */
+    background-color: #573f19;
+    color: #fff; 
 }
 

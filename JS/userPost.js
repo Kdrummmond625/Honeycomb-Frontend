@@ -66,11 +66,6 @@ function displayPosts(posts) {
             window.location.href = `../HTML/viewPost.html?id=${post._id}`
         });
 
-        // set up the delete button
-        // const deleteBtn = postElement.querySelector('.delete-btn');
-        // deleteBtn.addEventListener('click', async () => {
-        //     await deletePost(post._id);
-        // })
 
         postContainer.appendChild(postElement);
     });
@@ -84,7 +79,7 @@ function displayCategoryCounts(counts){
         const countElement = document.createElement('div')
         countElement.classList.add('category-count')
         countElement.innerHTML = `
-        <strong>${count._id}</strong>: ${count.count}`
+        <strong>${count._id}</strong> ${count.count}`
             //append the count element to the container
             categoryCountsContainer.appendChild(countElement)
     })
@@ -119,14 +114,6 @@ function logout() {
     localStorage.removeItem('jwtToken');
     window.location.href = '../index.html';
 }
-
-
-
-// Optional: Add event listener for search/filter functionality
-// document.getElementById('searchForm').addEventListener('submit', function (e) {
-//     e.preventDefault();
-//     filterPosts();
-// });
 
 // Event listener for DOM content loaded
 document.addEventListener('DOMContentLoaded', () => {

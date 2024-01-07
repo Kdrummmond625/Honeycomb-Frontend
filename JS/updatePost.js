@@ -63,7 +63,7 @@ function updatePost(postId) {
         title: document.getElementById('title').value,
         category: document.getElementById('category').value,
         content: document.getElementById('content').value,
-        isPublic: document.getElementById('isPublic').checked
+        isPublic: document.getElementById('toggle').checked
         
     };
 
@@ -89,6 +89,21 @@ function updatePost(postId) {
     })
     .catch(error => console.error('Error:', error)); // Log errors, if any
 }
+// Add an event listener to the form submission
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleCheckbox = document.getElementById('toggle');
+    const label = document.getElementById('privateLabel');
+
+    toggleCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            label.textContent = 'Private';
+        } else {
+            label.textContent = 'Public';
+        }
+    });
+});
+
 //logout function
 function logout() {
     localStorage.removeItem('token');

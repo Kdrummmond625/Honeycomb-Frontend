@@ -1,23 +1,28 @@
 /* Custom CSS for User Profile Page */
 
 body {
-    background-image: url("../Assests/background-2.png"); /* Background image */
+    background-image: url("../Assests/background-2.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
     margin: 0;
     font-family: 'Teko', sans-serif;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
 }
 
 /* Container styling */
 .container-fluid {
-    background-color: rgba(189, 140, 63, 0.97); /* Background color with opacity */
+    background-color: rgba(189, 140, 63, 0.97);
     border: 2px solid #37290C;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
     padding: 20px;
-    max-width: 900px;
-    min-height: 100vh;
+    max-width: 86vw; 
+    border-radius: 10px;
+    
 }
+
 
 .row {
     justify-content: center;
@@ -41,15 +46,18 @@ body {
 .navbar {
     background-color: #37290C ;
     color: #f4f0f0;
-    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5); /* Box shadow with opacity */
+    box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .navbar-brand {
     color: #c5b28c;
+    font-size: 2em;
 }
 
 .navbar-nav .nav-link {
     color: #c5b28c;
+    font-size: 1.2em;
 }
 
 .navbar-nav .nav-link:hover {
@@ -60,39 +68,38 @@ body {
     background-color: rgba(55, 41, 12, .97);
 }
 
-#container {
-    background-color: rgba(242, 237, 223, .5);
-    border: 2px solid #37290C;
-    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.5);
-    padding: 60px;
-    margin: 10px;
-}
-.post {
-    background-color: rgba(55, 41, 12, .97);
-    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.5);
-    padding: 5px;
-    border: 2px solid #37290C;
-    margin: 10px;
-    color: #ffffff;
-    font-family: 'Genos', sans-serif; 
-}
 #category-counts-container{
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    background-color: #fff;
+    background-color: #F2EDDF;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin-bottom: 30px;
     padding: .375rem .75rem;
     line-height: 1.5;
     border: 1px #dee2e6 solid;
     font-family: 'Genos', sans-serif; 
 }
+
+.post {
+    background-color: rgba(242, 237, 223, .5);
+    border: 2px solid #37290C;
+    box-shadow: 0px 0px 12px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.post:hover {
+    border-color: #4a2d0f; 
+    box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.65); 
+}
 h1{
-    color: #000000;
+    color: #F2EDDF;
     float: right;
-    padding: 3px;
+    padding: 8px;
+    padding-right: 10px;
     font-weight: 700;
 
 }
@@ -100,10 +107,16 @@ h1{
     padding-top: 60px;
     padding-bottom: 20px;
     font-weight: 500;
+    font-size: 1.7em;
+ }
+
+ p {
+    color: #000000;
+    font-size: 1.5em;
+    margin: 10px;
  }
 
  small {
     color: #ba8530;
-    font-size: 1.2em;
-    
+    font-size: 1.8em;
  }

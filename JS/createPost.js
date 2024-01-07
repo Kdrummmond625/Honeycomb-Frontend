@@ -6,7 +6,6 @@ document.getElementById('postForm').addEventListener('submit', async function (e
     const token = localStorage.getItem('token');
     if (!token) {
         console.error('No token found');
-        // Optionally, redirect to the login page or display an error
         return;
     }
 
@@ -39,6 +38,20 @@ document.getElementById('postForm').addEventListener('submit', async function (e
     .catch(error => console.error('Error:', error)); // Log any errors that occur during fetch
 });
 
+// Add an event listener to the form submission
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleCheckbox = document.getElementById('toggle');
+    const label = document.getElementById('privateLabel');
+
+    toggleCheckbox.addEventListener('change', function() {
+        if (this.checked) {
+            label.textContent = 'Private';
+        } else {
+            label.textContent = 'Public';
+        }
+    });
+});
 
 //logout function
 function logout() {

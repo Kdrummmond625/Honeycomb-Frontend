@@ -47,14 +47,5 @@ function fetchProfileData() {
 function displayProfileData(data) {
     //display username
     const username = document.getElementById('username');
-    username.textContent = data.username;
-
-    //display post count by category
-    const postCountsElement = document.getElementById('postCountsByCategory');
-    data.postCountsByCategory.forEach(category => {
-        const categoryElement = document.createElement('p');
-        categoryElement.innerHTML = `${category._id}<br>${category.count}`;
-        postCountsElement.appendChild(categoryElement);
-    });
-    
+    username.textContent = data.username; 
 }
