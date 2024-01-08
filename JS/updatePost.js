@@ -84,7 +84,6 @@ function updatePost(postId) {
     })
     .then(data => {
         console.log('Success:', data);
-        alert('Post updated successfully!');
         window.location.href = 'userPosts.html'; // Redirect to 'My Posts' page on success
     })
     .catch(error => console.error('Error:', error)); // Log errors, if any
