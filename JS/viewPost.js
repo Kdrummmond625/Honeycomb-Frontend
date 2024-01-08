@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Function to fetch post data
 function fetchPostData(postId) {
     // Send a request to your backend to get post data
-    fetch(`http://localhost:4000/honeycomb/home/myPosts/${postId}`, {
+    fetch(`https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/home/myPosts/${postId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -71,7 +71,7 @@ function fetchPostData(postId) {
 async function deletePost(id) {
     const token = localStorage.getItem('token');
     console.log("Retrieved token:", token); // Log the retrieved token
-    const response = await fetch(`http://localhost:4000/honeycomb/home/deletePost/${id}`, {
+    const response = await fetch(`https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/home/deletePost/${id}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

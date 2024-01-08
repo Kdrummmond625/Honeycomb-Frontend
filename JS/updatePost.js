@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Function to fetch post data
 function fetchPostData(postId) {
     // Send a request to your backend to get post data
-    fetch(`http://localhost:4000/honeycomb/home/myPosts/${postId}`, {
+    fetch(`https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/home/myPosts/${postId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function updatePost(postId) {
     };
 
     // Send a PUT request to update the post
-    fetch(`http://localhost:4000/honeycomb/home/updatePost/${postId}`, {
+    fetch(`https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/home/updatePost/${postId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',

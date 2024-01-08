@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function fetchProfileData() {
     //grab token from local storage
     const token = localStorage.getItem('token');
-    fetch('http://localhost:4000/honeycomb/home/profile', {
+    fetch('https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/home/profile', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',

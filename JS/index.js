@@ -5,7 +5,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('https://honeycomb-0f2098931edc.herokuapp.com/4honeycomb/honeycomb/user/login', {
+        const response = await fetch('https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

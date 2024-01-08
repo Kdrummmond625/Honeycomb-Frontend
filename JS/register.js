@@ -8,7 +8,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
     const email = document.getElementById('email').value;
 
     // send a post request to the server's signup endpoint
-    const response = await fetch('http://localhost:4000/honeycomb/user/signup', {
+    const response = await fetch('https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/user/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

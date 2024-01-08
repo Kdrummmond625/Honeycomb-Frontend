@@ -22,7 +22,7 @@ document.getElementById('postForm').addEventListener('submit', async function (e
     };
 
     // Make a POST request to the server with the post data
-    fetch('http://localhost:4000/honeycomb/home/createPost', {
+    fetch('https://honeycomb-0f2098931edc.herokuapp.com/honeycomb/home/createPost', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
