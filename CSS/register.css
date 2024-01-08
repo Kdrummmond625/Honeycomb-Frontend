@@ -58,3 +58,19 @@ h1 {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 600px) {
+    .container-fluid {
+        width: 90%; 
+        max-width: none; 
+        padding: 10px; 
+    }
+
+    h1 {
+        font-size: 1.2em; 
+    }
+
+    #registrationForm input,
+    #registrationForm button {
+        font-size: 1em; 
+    }
+}
